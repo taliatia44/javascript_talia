@@ -1,16 +1,21 @@
-let num= +prompt("enter a number");
-let digit=0;
-let opposite=0;
-let numSave=num;
+let num1 = +prompt("enter a number 1");
+let num2 = +prompt("enter a number 2");
 
-if(isNaN(num)){
+if(isNaN(num1)|| isNaN(num2)){
     throw new Error ("this is not a number")
 }
-while(num>0){
-    digit=num%10;
-    opposite=opposite*10+digit;
-    num=parseInt(num/10);
 
+if(num1<num2){
+    while(num1<=num2){
+        console.log(num1);
+        num1++;
+    }
 }
 
-console.log(`the opposite of the number : ${numSave} is the number : ${opposite}`)
+else{
+    while(num1>=num2){
+        console.log(num1);
+        num1--;
+    }
+}
+
